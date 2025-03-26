@@ -9,17 +9,24 @@ class App {
 		this.page = 1;
 		this.per_page = window.innerWidth >= 1345 ? 8 : 6;
 		this.imageSize = null;
+		this.apiKey = null;
+		this.showPrompt();
 		this.setupIntersectionObserver();
 		this.fetchImages();
 	}
-
+	showPrompt() {
+		let key = prompt("Please enter your unsplash API KEY");
+		if (key != null) {
+			this.apiKey = key;
+		}
+	}
 	async fetchImages() {
 		try {
 			const response = await fetch(
 				`https://api.unsplash.com/collections/Lyz89J_lfpY/photos?per_page=${this.per_page}&page=${this.page}`,
 				{
 					headers: {
-						Authorization: `Client-ID ${UNSPLASH_KEY}`,
+						Authorization: `Client-ID ${this.apiKey}`,
 					},
 				}
 			);
@@ -47,8 +54,6 @@ class App {
 	}
 
 	getImageBlur(blurHash, width, height) {
-		console.log(this.itemsToFetchCount, window.innerWidth);
-		console.log(width, height);
 		const canvas = document.createElement("canvas");
 		const ctx = canvas.getContext("2d");
 		const imageData = ctx.createImageData(width, height);
