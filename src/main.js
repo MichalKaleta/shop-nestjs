@@ -19,7 +19,7 @@ class App {
 				`https://api.unsplash.com/collections/Lyz89J_lfpY/photos?per_page=${this.per_page}&page=${this.page}`,
 				{
 					headers: {
-						Authorization: `Client-ID ${process.env.UNSPLASH_KEY}`,
+						Authorization: `Client-ID ${secrets.UNSPLASH_KEY}`,
 					},
 				}
 			);
