@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+	</head>
+	<body>
+		<div id="app" class="layout">
+			<header class="header">
+				<div class="header-left">
+					<h1>Mock Online Shop</h1>
+					<h2>You can't really buy anything here</h2>
+				</div>
+				<div class="header-right">
+					<div class="search-bar">
+						<input
+							type="text"
+							placeholder="Don't even bother writing anything here..."
+						/>
+						<button>Search</button>
+					</div>
+				</div>
+			</header>
+
+			<nav class="menu">
+				<div class="category-filters">
+					<h3>Categories</h3>
+					<ul>
+						<li><a href="#" class="active">All Products</a></li>
+						<li><a href="#">New Arrivals</a></li>
+						<li><a href="#">Best Sellers</a></li>
+						<li><a href="#">On Sale</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="content-header">
+					<h2>All Products</h2>
+				</div>
+				<div class="image-grid" id="imageGrid"></div>
+				<div class="observer-target" id="observerTarget">
+					<div class="loading">Loading more products...</div>
+				</div>
+			</main>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>
