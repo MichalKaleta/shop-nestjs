@@ -10,7 +10,7 @@ class App {
 		this.per_page = window.innerWidth >= 1345 ? 8 : 6;
 		this.imageSize = null;
 		this.apiKey = null;
-		this.showPrompt();
+		//this.showPrompt();
 		this.setupIntersectionObserver();
 		this.fetchImages();
 	}
@@ -23,12 +23,7 @@ class App {
 	async fetchImages() {
 		try {
 			const response = await fetch(
-				`https://api.unsplash.com/collections/Lyz89J_lfpY/photos?per_page=${this.per_page}&page=${this.page}`,
-				{
-					headers: {
-						Authorization: `Client-ID ${this.apiKey}`,
-					},
-				}
+				`gallery?per_page=${this.per_page}&page=${this.page}`
 			);
 			let data = await response.json();
 			if (data.errors) {

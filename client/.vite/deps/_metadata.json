@@ -1,0 +1,15 @@
+{
+  "hash": "c2a189b2",
+  "configHash": "1a0d986b",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "47859857",
+  "optimized": {
+    "blurhash": {
+      "src": "../../client/workflows/node_modules/blurhash/dist/esm/index.js",
+      "file": "blurhash.js",
+      "fileHash": "9c0c8003",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
