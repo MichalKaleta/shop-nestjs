@@ -1,0 +1,18 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "shop/dist/main.js",
+			"use": "@vercel/node"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "shop/dist/main.js"
+		}
+	],
+	"env": {
+		"NODE_ENV": "production"
+	}
+}
